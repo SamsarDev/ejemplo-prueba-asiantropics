@@ -1,69 +1,97 @@
 # Objetivo
 
-Medir habilidades y conocimientos en el uso de python como lenguaje de
-programación, entendimiento general del framework Odoo, toma de decisiones y
-presentación de información.
+Medir habilidades y conocimientos del desarrollador frontend en temas de maquetacion y logica de programacion con Javascript.
 
-## Instrucciones generales
+## Maquetación
 
-1. Cree un nuevo repositorio con el formato de nombre:
-{nombre}-{apellido}-{prueba}-{asiantropics}
+### Instrucciones
 
-2. Cree una carpeta por cada sección de la prueba con el nombre de dicha
-sección y un documento README.md para presentar las respuestas de los
-ejercicios.
+1. Siguiendo el siguiente [Link] encontrará el diseño (mobile / desktop) de la
+prueba y en este otro [Link] encontrará los assets que se requieren para
+realizar está prueba.
 
-> Siéntase libre de comentar y explicar su respuesta en el archivo markdown, así
-como de utilizar cualquier otra herramienta necesaria para presentar su solución al
-ejercicio. Puede ver un ejemplo del archivo esperado [aquí](https://github.com/SamsarDev/ejemplo-prueba-asiantropics).
+2. Realizar la maquetación de las siguientes páginas (se lista el nombre con el
+que aparecen en figma):<br><br> a. barista-transition (agregar un botón de next para avanzar al siguiente paso) <br> b. q1 y q1-selected (se debe poder seleccionar y deseleccionar las opciones) <br> c. q2 y q2-selected (se debe poder seleccionar y deseleccionar las opciones)
 
-## Python
+3. Crear la interacción entre las diferentes páginas, al presionar el botón back
+o next se debe mover entre las diferentes páginas.
 
-1. Mencione 3 normas pertenecientes a la guía de estilos PEP8 y brinde ejemplos de su uso e importancia.
+4. La navigation bar y el link “Why it matters” son solamente visuales no
+tienen ninguna acción.
 
-2. Describa los tipos de datos mutables de Python:
+## Javascript
 
-3. Describa los tipos de datos inmutables de Python:
+### Instrucciones
 
-4. Complete la palabra reservada de python en el siguiente programa:
+Crear un script que pueda ser ejecutado en la consola del navegador en la
+página de detalle de un producto de está [página] y que haga lo siguiente:
 
-```python
-  x = 6
-  if x < 0:
-    print("negativo")
-  "?" x == 0:
-    print("cero")
-  else:
-    print("positivo")
+Si el usuario elige alguno de estos Sizes: 2T, 3T o 4T se debe mostrar un mensaje
+debajo del precio del producto de la siguiente forma:
+
+El texto debe cambiar cuando el usuario cambie la cantidad de productos que va a
+agregar:
+
++ -1+ : Add 2 of this product and the third one is free!
++ -2+ : Add another one free to your cart.
++ -3+ : Congrats! add to cart now!
++ 4 en adelante: debe esconder el mensaje.
+
+## Lógica
+
+### Instrucciones
+
+Basado en un questionario con N preguntas y M respuestas por pregunta crear un
+script en javascript que realice lo siguiente:
+
+1. Calcular la cantidad de combinaciones (solo una respuesta por pregunta)
+
+Estructura del cuestionario:
+
+```javascript
+[
+  {
+    questionId: 1,
+    questionName: 'What is you favorite color?'
+    answers: [
+      {
+        answerName: 'Red',
+        answerId: 11
+      },
+      {
+        answerName: 'Blue',
+        answerId: 12
+      },
+      {
+        answerName: 'Pink',
+        answerId: 13
+      }
+    ]
+  },
+  {
+    questionId: 2,
+    questionName: 'Are you a flat-earther?'
+    answers: [
+      {
+        answerName: 'Yes',
+        answerId: 21
+      },
+      {
+        answerName: 'No',
+        answerId: 22
+      }
+    ]
+  }
+]
 ```
 
-5. Cual de las opciones es equivalente al código de python mostrado?
+2. Crear un archive CSV con todas las combinaciones sin usar ningun librería de
+terceros (zero third-party dependencies approach)
 
-```python
-  if 5 == 2:
-    print("Si")
-  else:
-    print("No")
-```
+Ejemplo visual del CSV:
 
-+ print(“No”) if 5 == 2 else print (“Si”)
-
-+ if 5 == 2 print(“Si”) : print(“No”)
-
-+ if 5 == 2 print(“Si”) else print (“No”)
-
-+ print(“Si”) if 5 == 2 else print(“No”)
-
-## Odoo
-
-Desarrolle las propuestas que brinden solución a los siguientes requerimientos proporcionados por gerencia. (Puede proponer la compra de módulos y su implementación,
-estimar tiempo de desarrollo u ofrecer soluciones alternativas de ser necesario).
-
-1. La gerencia de mercadeo necesita generar un reporte diario con las visitas de
-clientes a tiendas, este reporte debe contener: <br> <br> Cantidad de compras realizadas en el día, medio por el cual se enteraron de la empresa, comentarios del cliente.
-
-2. Como parte del servicio post-venta la gerencia de mercadeo, desea enviar a todos sus clientes una encuesta de satisfacción una vez que la venta se encuentra
-facturada.
-
-3. La empresa “Los Chanchitos”, cuenta con una aplicación externa a Odoo que maneja la logística de sus envíos y recepciones. Dicha aplicación se encuentra desarrollada en Python y alojada en Azure. <br> <br> Actualmente, para registrar los costos de gasolina, mantenimiento y depreciación de vehículos en Odoo se genera un reporte de excel desde esta aplicación y se registran manualmente uno por uno. <br> <br> Se desea automatizar la carga de esta información a Odoo para evitar el trabajo
-manual.
+| QuestionName1 | QuestionName2 | QuestionName3 | QuestionNameN |
+| --- | --- | --- | ---|
+| AnwerValid1 | AnwerValid2 | AnwerValid3 | AnwerValidN |
+| AnwerValid1 | AnwerValid2 | AnwerValid3 | AnwerValidN |
+| AnwerValid1 | AnwerValid2 | AnwerValid3 | AnwerValidN |
