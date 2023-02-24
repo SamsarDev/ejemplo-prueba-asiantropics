@@ -1,0 +1,6 @@
+{
+  "name": "problema-3",
+  "scripts": {
+    "start": "node solucion.js"
+  }
+}
